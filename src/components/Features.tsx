@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatedSection from './AnimatedSection'; // Import
 
 const featuresData = [
   {
@@ -25,12 +26,12 @@ const FeatureCard = ({ title, description }: { title: string, description: strin
 
 export default function Features() {
   return (
-    <section className="w-full max-w-7xl mx-auto py-24 px-8">
+    <AnimatedSection className="w-full max-w-7xl mx-auto py-24 px-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {featuresData.map((feature) => (
           <FeatureCard key={feature.title} {...feature} />
         ))}
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
